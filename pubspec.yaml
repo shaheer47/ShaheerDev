@@ -39,7 +39,9 @@ dependencies:
   lottie: ^1.4.3
   rive: ^0.9.1
   flutter_svg: ^1.1.5
-
+  build_runner: ^2.1.0
+  build_test: ^2.1.0
+  build_web_compilers: ^3.0.0
 
 dev_dependencies:
   flutter_test:
