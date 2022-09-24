@@ -24,15 +24,29 @@
 <!--  </script>-->
 <!--  &lt;!&ndash; This script adds the flutter initialization JS code &ndash;&gt;-->
 <!--  <script src="flutter.js" defer></script>-->
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = '3038906718';
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 <body>
   <script>
-   if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
+     window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        return appRunner.runApp();
       });
-    }
-<!--    window.addEventListener('load', function(ev) {-->
+    });
+ <!--    window.addEventListener('load', function(ev) {-->
 <!--      // Download main.dart.js-->
 <!--      _flutter.loader.loadEntrypoint({-->
 <!--        serviceWorker: {-->
