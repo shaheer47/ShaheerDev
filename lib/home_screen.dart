@@ -1,10 +1,10 @@
+import 'package:ShaheerDev/sections/about/about_section.dart';
+import 'package:ShaheerDev/sections/contact/contact_section.dart';
+import 'package:ShaheerDev/sections/recent_work/recent_work_section.dart';
+import 'package:ShaheerDev/sections/service/service_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_web_portfolio/sections/about/about_section.dart';
-import 'package:flutter_web_portfolio/sections/contact/contact_section.dart';
-import 'package:flutter_web_portfolio/sections/recent_work/recent_work_section.dart';
-import 'package:flutter_web_portfolio/sections/service/service_section.dart';
-import 'package:flutter_web_portfolio/sections/topSection/top_section.dart';
+import 'package:ShaheerDev/sections/topSection/top_section.dart';
 
 import 'constants.dart';
 
