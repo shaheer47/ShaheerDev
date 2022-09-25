@@ -3,8 +3,11 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "4741dd9fe00b82cb10fba557b58ffb28",
-"assets/assets/AssetManifest.json": "e31d8269fdbf4b120943e1a18aa6e492",
+  "assets/AssetManifest.json": "b62d93153b51ad09369a5fc40e9e429c",
+"assets/assets/AssetManifest.json": "4741dd9fe00b82cb10fba557b58ffb28",
+"assets/assets/assets/AssetManifest.json": "e31d8269fdbf4b120943e1a18aa6e492",
+"assets/assets/assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
+"assets/assets/assets/NOTICES": "6ea58142caf44706e2af4d7f16f71fc6",
 "assets/assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/assets/images/android.gif": "1a32dcad71aff93c8571804ec20838d2",
 "assets/assets/images/android.png": "631d74800bbafc5779009401003bc570",
@@ -19,6 +22,7 @@ const RESOURCES = {
 "assets/assets/images/desktop.png": "d4794e3ddcb4fce9a2c12246e3b4d8a7",
 "assets/assets/images/download.png": "d9317d736e7b69f20f57f6ab13f34d3c",
 "assets/assets/images/email.png": "f59e8ec158ec05d21c8b251d7b0017ca",
+"assets/assets/images/flutter.png": "d59d0e8266b087a7a7f8a61c50ad4f6e",
 "assets/assets/images/flutter.svg": "5c3a6308a335872a831a9f836f0e236c",
 "assets/assets/images/graphic.png": "d7aaa5a5615483382572b5d5c24c5e5b",
 "assets/assets/images/hello_textile.png": "77c5eec89dbd60e31c6335eb67c6f650",
@@ -69,9 +73,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "83f86d1e87d6eff2fce83418dd2bc567",
-"/": "83f86d1e87d6eff2fce83418dd2bc567",
-"main.dart.js": "e40d9832bcb0cd176fc14703de5c4190",
+"index.html": "319e1edb5485bad0986cb8891c0c885d",
+"/": "319e1edb5485bad0986cb8891c0c885d",
+"main.dart.js": "349391dee682b2bfcf9aa21fe5fd17cd",
 "manifest.json": "900821dff646407adb6152eb5cfe9ae1",
 "version.json": "737cb8a258279bd796cdcc81047dbeaf"
 };

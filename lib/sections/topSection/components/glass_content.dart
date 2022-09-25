@@ -63,7 +63,7 @@ class GlassContent extends StatelessWidget {
                           width: 10,
                         ),
                         isWebMobile
-                            ? Container()
+                            ? const Text('👋')
                             : Lottie.asset('assets/lottie/hand_hi.json',
                                 width: 100, height: 100),
                       ],

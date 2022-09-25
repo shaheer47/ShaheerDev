@@ -14,7 +14,6 @@ import 'package:flutter/foundation.dart';
 class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       // margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2,horizontal: MediaQuery.of(context).size.width*0.05),
@@ -52,9 +51,9 @@ class AboutSection extends StatelessWidget {
                   width: 30,
                 ),
                 Container(
-                     child: MediaQuery.of(context).size.width < 1090
+                    child: MediaQuery.of(context).size.width < 1090
                         ? Row(
-                       mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: listOfStackIcons(context),
                           )
                         : Column(
@@ -159,14 +158,18 @@ class AboutSection extends StatelessWidget {
         //     .of(context)
         //     .size
         //     .width *0.15,
-        child: isWebMobile?Image.asset('assets/images/android.png'):Lottie.asset('assets/lottie/android.json'),
+        child: isWebMobile
+            ? Image.asset('assets/images/android.png')
+            : Lottie.asset('assets/lottie/android.json'),
       ),
       SizedBox(
         height: MediaQuery.of(context).size.height / 3.5,
         width: 190,
-        child: const RiveAnimation.asset(
-          'assets/rive/flutter_rive.riv',
-        ),
+        child: isWebMobile
+            ? Image.asset('assets/images/flutter.png')
+            : const RiveAnimation.asset(
+                'assets/rive/flutter_rive.riv',
+              ),
       )
     ];
   }

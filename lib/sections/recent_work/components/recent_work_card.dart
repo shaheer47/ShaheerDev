@@ -69,7 +69,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                           style: Theme.of(context)
                               .textTheme
                               .titleLarge!
-                              .copyWith(fontWeight: FontWeight.bold)),
+                              .copyWith(fontWeight: FontWeight.bold,fontSize:MediaQuery.of(context).size.width*0.03 )),
                       const SizedBox(height: kDefaultPadding / 2),
                       Text(
                         recentWorks[widget.index].title,
@@ -79,10 +79,10 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                             letterSpacing: 1.0,
                             // the white space between letter, default is 0.0
                             fontSize:
-                                MediaQuery.of(context).size.height * 0.03),
+                            ( MediaQuery.of(context).size.height *   MediaQuery.of(context).size.width )* 0.00004),
                       ),
-                      SizedBox(height: kDefaultPadding),
-                      Text(
+                      const SizedBox(height: kDefaultPadding),
+                      const Text(
                         "View Details",
                         style: TextStyle(decoration: TextDecoration.underline),
                       )
