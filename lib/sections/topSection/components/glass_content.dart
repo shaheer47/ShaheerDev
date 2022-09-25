@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:flutter/foundation.dart';
 
 import '../../../constants.dart';
 
@@ -16,6 +17,10 @@ class GlassContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('--:${MediaQuery.of(context).size.width}');
+    final isWebMobile = kIsWeb &&
+        (defaultTargetPlatform == TargetPlatform.iOS ||
+            defaultTargetPlatform == TargetPlatform.android);
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: BackdropFilter(
@@ -32,6 +37,9 @@ class GlassContent extends StatelessWidget {
               Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: isWebMobile
+                    ? MainAxisAlignment.center
+                    : MainAxisAlignment.start,
                 children: [
                   const SizedBox(
                     height: 30,
@@ -54,8 +62,10 @@ class GlassContent extends StatelessWidget {
                         const SizedBox(
                           width: 10,
                         ),
-                        Lottie.asset('assets/lottie/hand_hi.json',
-                            width: 100, height: 100),
+                        isWebMobile
+                            ? Container()
+                            : Lottie.asset('assets/lottie/hand_hi.json',
+                                width: 100, height: 100),
                       ],
                     ),
                   ),
@@ -84,15 +94,17 @@ class GlassContent extends StatelessWidget {
                   )
                 ],
               ),
-              Container(
-                child: Lottie.asset('assets/lottie/person.json',
-                    height: MediaQuery.of(context).size.width >= 1200
-                        ? 700
-                        : MediaQuery.of(context).size.width * 0.6,
-                    width: MediaQuery.of(context).size.width >= 1200
-                        ? 700
-                        : MediaQuery.of(context).size.width * 0.4),
-              )
+              isWebMobile
+                  ? const SizedBox()
+                  : Container(
+                      child: Lottie.asset('assets/lottie/person.json',
+                          height: MediaQuery.of(context).size.width >= 1200
+                              ? 700
+                              : MediaQuery.of(context).size.width * 0.6,
+                          width: MediaQuery.of(context).size.width >= 1200
+                              ? 700
+                              : MediaQuery.of(context).size.width * 0.4),
+                    )
             ],
           ),
         ),

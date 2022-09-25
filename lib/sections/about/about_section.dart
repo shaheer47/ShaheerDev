@@ -9,11 +9,12 @@ import '../../utils/open_url.dart';
 import 'components/about_section_text.dart';
 import 'components/about_text_with_sign.dart';
 import 'components/experience_card.dart';
+import 'package:flutter/foundation.dart';
 
 class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print('${MediaQuery.of(context).size.width * 0.15}======');
+
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       // margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2,horizontal: MediaQuery.of(context).size.width*0.05),
@@ -44,7 +45,7 @@ class AboutSection extends StatelessWidget {
                   width: 300,
                   child: const AboutSectionText(
                     text:
-                        'I’m a software engineer specializing in building mobile applications in IOS and Android. I have a solid background in creating complex mobile applications for iPhone and Android. I can work independently and respect a deadline. I feel comfortable working with a good team of developers. I have more then 3 years of experience in mobile development. I have developed many applications using REST APIS for many clients. I have experience in Android (native) and Flutter. Work over 20 applications and successfully delivered on time. I have experience with working on different types of applications like POS systems, NFC tags, Social Media Platform, Food Delivery and many more.',
+                        'I’m a software engineer specializing in building mobile applications in IOS and Android. I have a solid background in creating complex mobile applications for iPhone and Android. I can work independently and respect a deadline. I feel comfortable working with a good team of developers. I am working for more than 3 years as an application developer. I have developed many applications using REST APIS for many clients. My Expertise is with Android (native) and Flutter. Work over 20 applications and successfully delivered. I have diverse experience working on different types of applications like POS systems, NFC tags, Social Media platforms, Food Delivery, and many more.',
                   ),
                 ),
                 const SizedBox(
@@ -147,6 +148,9 @@ class AboutSection extends StatelessWidget {
   }
 
   List<Widget> listOfStackIcons(BuildContext context) {
+    final isWebMobile = kIsWeb &&
+        (defaultTargetPlatform == TargetPlatform.iOS ||
+            defaultTargetPlatform == TargetPlatform.android);
     return [
       SizedBox(
         height: MediaQuery.of(context).size.height / 3.5,
@@ -155,7 +159,7 @@ class AboutSection extends StatelessWidget {
         //     .of(context)
         //     .size
         //     .width *0.15,
-        child: Lottie.asset('assets/lottie/android.json'),
+        child: isWebMobile?Image.asset('assets/images/android.png'):Lottie.asset('assets/lottie/android.json'),
       ),
       SizedBox(
         height: MediaQuery.of(context).size.height / 3.5,

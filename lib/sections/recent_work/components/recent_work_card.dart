@@ -27,7 +27,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
       margin: EdgeInsets.symmetric(
           horizontal: MediaQuery.of(context).size.width * 0.05),
       child: InkWell(
-        onTap:()=> widget.press(),
+        onTap: () => widget.press(),
         onHover: (value) {
           setState(() {
             isHover = value;
@@ -65,14 +65,21 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(recentWorks[widget.index].category.toUpperCase()),
-                      SizedBox(height: kDefaultPadding / 2),
+                      Text(recentWorks[widget.index].category.toUpperCase(),
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleLarge!
+                              .copyWith(fontWeight: FontWeight.bold)),
+                      const SizedBox(height: kDefaultPadding / 2),
                       Text(
                         recentWorks[widget.index].title,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline5
-                            ?.copyWith(height: 1.5),
+                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                            height: 1.2,
+                            // the height between text, default is null
+                            letterSpacing: 1.0,
+                            // the white space between letter, default is 0.0
+                            fontSize:
+                                MediaQuery.of(context).size.height * 0.03),
                       ),
                       SizedBox(height: kDefaultPadding),
                       Text(

@@ -3,7 +3,11 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "e31d8269fdbf4b120943e1a18aa6e492",
+  "assets/AssetManifest.json": "4741dd9fe00b82cb10fba557b58ffb28",
+"assets/assets/AssetManifest.json": "e31d8269fdbf4b120943e1a18aa6e492",
+"assets/assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
+"assets/assets/images/android.gif": "1a32dcad71aff93c8571804ec20838d2",
+"assets/assets/images/android.png": "631d74800bbafc5779009401003bc570",
 "assets/assets/images/android.svg": "5f4709b74bb37a3dd3857743691ed8d2",
 "assets/assets/images/anxietyease.png": "be1923c4de1870f97aac315dceb82986",
 "assets/assets/images/background.png": "0614a717659df3fd409c60ff04fac983",
@@ -18,6 +22,7 @@ const RESOURCES = {
 "assets/assets/images/flutter.svg": "5c3a6308a335872a831a9f836f0e236c",
 "assets/assets/images/graphic.png": "d7aaa5a5615483382572b5d5c24c5e5b",
 "assets/assets/images/hello_textile.png": "77c5eec89dbd60e31c6335eb67c6f650",
+"assets/assets/images/hi.gif": "dc314fa7c95d00e4fa39b1c32686212b",
 "assets/assets/images/Hover.png": "f0a2318c40269d84384f56f54d25ad69",
 "assets/assets/images/Hover_flip.png": "57d317fc22080b316188ebe73407065b",
 "assets/assets/images/Intreaction_design.png": "98e873648b7c2d3062556f2f8c09d4c3",
@@ -33,6 +38,7 @@ const RESOURCES = {
 "assets/assets/images/signature_purple.png": "b5d9c0263bfc5676d0506c775d3ab061",
 "assets/assets/images/skype.png": "955d4329bf55cd47008c2edd6c08ad99",
 "assets/assets/images/tap-o.jpeg": "03dcb836d1eae70fed6c9755ba4b2d6a",
+"assets/assets/images/thinking.gif": "ca20ab540bde1ccde143bbc4b91d5104",
 "assets/assets/images/ui.png": "6ca82a6c70f80fd75c56b1fe66caa180",
 "assets/assets/images/whatsapp.png": "e33ef8b852729cd9dd7c6af3837f9b23",
 "assets/assets/images/work_1.png": "ff8242cdad37e4c83136a90a325810a8",
@@ -44,6 +50,7 @@ const RESOURCES = {
 "assets/assets/lottie/hand_hi.json": "581df38d346e7514e6b10f32b971fea3",
 "assets/assets/lottie/hi.json": "f63e1792a21f498b8b87cb8bb262c56c",
 "assets/assets/lottie/person.json": "fc36ff426f3061f0b7131b21375753df",
+"assets/assets/NOTICES": "6ea58142caf44706e2af4d7f16f71fc6",
 "assets/assets/rive/android.riv": "b4eb1ec59a3af0e87e8db79907f9af08",
 "assets/assets/rive/flutter_rive.riv": "d0802f9a79fb2e387c86d44ce2bc2110",
 "assets/assets/rive/lights.riv": "8a0f1a7a6a7adcfb61bead100560abed",
@@ -62,9 +69,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "615501615e7a57eb337b4f48751188e1",
-"/": "615501615e7a57eb337b4f48751188e1",
-"main.dart.js": "8dd8d7faffcd7091cc879f5717228031",
+"index.html": "83f86d1e87d6eff2fce83418dd2bc567",
+"/": "83f86d1e87d6eff2fce83418dd2bc567",
+"main.dart.js": "e40d9832bcb0cd176fc14703de5c4190",
 "manifest.json": "900821dff646407adb6152eb5cfe9ae1",
 "version.json": "737cb8a258279bd796cdcc81047dbeaf"
 };
