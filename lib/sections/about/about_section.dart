@@ -33,8 +33,8 @@ class AboutSection extends StatelessWidget {
                   children: [
                     const AboutTextWithSign(),
                     MediaQuery.of(context).size.width > 844
-                        ? const ExperienceCard(numOfExp: "3+")
-                        : SizedBox(),
+                        ?  ExperienceCard(numOfExp: "${DateTime.now().year-2020}+")
+                        : const SizedBox(),
                   ],
                 ),
                 Container(
@@ -124,21 +124,22 @@ class AboutSection extends StatelessWidget {
                   launchMailClient();
                 },
               ),
-              SizedBox(width: kDefaultPadding * 1.5),
-              DefaultButton(
-                imageSrc: "assets/images/download.png",
-                text: "Download CV",
-                press: () async {
-                  String url =
-                      'https://drive.google.com/file/d/1lHmZ50-hbugQIFnTQ0r7DsrXhhOMKVdi/view';
-                  if (await canLaunch(url)) {
-                    await launch(url);
-                  } else {
-                    print("test url3");
-                    throw 'Could not launch $url';
-                  }
-                },
-              ),
+              ///Not sharing my resume
+              // SizedBox(width: kDefaultPadding * 1.5),
+              // DefaultButton(
+              //   imageSrc: "assets/images/download.png",
+              //   text: "Download CV",
+              //   press: () async {
+              //     String url =
+              //         'https://drive.google.com/file/d/1lHmZ50-hbugQIFnTQ0r7DsrXhhOMKVdi/view';
+              //     if (await canLaunch(url)) {
+              //       await launch(url);
+              //     } else {
+              //       print("test url3");
+              //       throw 'Could not launch $url';
+              //     }
+              //   },
+              // ),
             ],
           ),
         ],

@@ -53,7 +53,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                   ),
                   image: DecorationImage(
                     image: AssetImage(recentWorks[widget.index].image),
-                    fit: BoxFit.fill,
+                    fit: BoxFit.scaleDown,
                   ),
                 ),
                 // child: Image.asset()

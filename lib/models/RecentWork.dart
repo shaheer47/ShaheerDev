@@ -9,19 +9,19 @@ class RecentWork {
 List<RecentWork> recentWorks = [
   RecentWork(
     id: 1,
-    title: "Textile Platform for Buying/Selling from Raw Materials to Finished Goods",
-    category: "Hello Textile",
-    image: "assets/images/hello_textile.png",
+    title: "A SAAS base multi-vendor / single store with rider & vendor app (flutter/laravel/nuxt)",
+    category: "Nictus Store",
+    image: "assets/images/inctus_ecommerce.png",
     url: 'https://play.google.com/store/apps/details?id=com.textilechat.ingenious.textilechat'
   ),
   // https://play.google.com/store/apps/details?id=com.textilechat.ingenious.textilechat
 
   RecentWork(
     id: 2,
-    title: "Bumpdate is the first-ever app to help expecting parents privately share their pregnancies with their loved ones.",
-    category: "Bumpdate",
-    image: "assets/images/bumpdate.png",
-    url: 'https://play.google.com/store/apps/details?id=com.bumpdate'
+    title: "A SAAS base online appointment booking solution with flutter mobile app & laravel.",
+    category: "Nictus Consultation",
+    image: "assets/images/inctus_consultant.png",
+    url: 'https://codecanyon.net/item/nictus-consultation-complete-online-consultation-solution-with-flutter-mobile-app-and-laravel/37515853'
   ),
   // https://play.google.com/store/search?q=bumpdate&c=apps
 
@@ -37,10 +37,10 @@ List<RecentWork> recentWorks = [
 
   RecentWork(
     id: 4,
-    title: "AnxietyEase is a platform that aims to provide for users to work on easing their anxieties",
-    category: "AnxietyEase",
-    image: "assets/images/anxietyease.png",
-    url: 'https://play.google.com/store/apps/details?id=com.anxietyease'
+    title: "Share your digital business card from NFC Card or Ring",
+    category: "BLACKLINK Cards",
+    image: "assets/images/blacklink_card.png",
+    url: 'https://blacklink.cc'
   ),
   // https://play.google.com/store/apps/details?id=com.anxietyease
 ];

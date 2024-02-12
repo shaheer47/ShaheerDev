@@ -15,7 +15,7 @@ class ExperienceCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: const EdgeInsets.all(kDefaultPadding),
-      height: 200,
+      height: 220,
       width: 200,
       decoration: BoxDecoration(
         color: const Color(0xFFF7E8FF),

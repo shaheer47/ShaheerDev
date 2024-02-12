@@ -11,71 +11,69 @@ class RecentWorkSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: kDefaultPadding * 6),
+      margin: const EdgeInsets.only(top: kDefaultPadding * 6),
       width: double.infinity,
       // just for demo
       // height: 600,
       decoration: BoxDecoration(
-        color: Color(0xFFF7E8FF).withOpacity(0.3),
-        image: DecorationImage(
+        color: const Color(0xFFF7E8FF).withOpacity(0.3),
+        image: const DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage("assets/images/recent_work_bg.png"),
         ),
       ),
-      child: Container(
-        child: Column(
-          children: [
-            Transform.translate(
-              offset: const Offset(0, -80),
-              child: const HireMeCard(),
-            ),
-            const SectionTitle(
-              title: "Recent Works",
-              subTitle: "My recent developed apps",
-              color: Color(0xFFFFB100),
-            ),
-            const SizedBox(height: kDefaultPadding * 1.5),
-            Wrap(
-              children: List.generate(
-                recentWorks.length,
-                (index) => Container(
-                  margin: const EdgeInsets.all(10),
-                  child: RecentWorkCard(
-                    index: index,
-                    press: () async {
-                      try {
-                        await launchUrl(Uri.parse(recentWorks[index].url));
-                      } catch (e) {
-                        print('=----> $e');
-                      }
-                    },
-                  ),
+      child: Column(
+        children: [
+          Transform.translate(
+            offset: const Offset(0, -80),
+            child: const HireMeCard(),
+          ),
+          const SectionTitle(
+            title: "Recent Works",
+            subTitle: "My recent developed apps",
+            color: Color(0xFFFFB100),
+          ),
+          const SizedBox(height: kDefaultPadding * 1.5),
+          Wrap(
+            children: List.generate(
+              recentWorks.length,
+              (index) => Container(
+                margin: const EdgeInsets.all(10),
+                child: RecentWorkCard(
+                  index: index,
+                  press: () async {
+                    try {
+                      await launchUrl(Uri.parse(recentWorks[index].url));
+                    } catch (e) {
+                      print('=----> $e');
+                    }
+                  },
                 ),
               ),
             ),
+          ),
 
-            // Wrap(
-            //   spacing: kDefaultPadding,
-            //   runSpacing: kDefaultPadding * 2,
-            //   children:
+          // Wrap(
+          //   spacing: kDefaultPadding,
+          //   runSpacing: kDefaultPadding * 2,
+          //   children:
 
-            // List.generate(
-            //   recentWorks.length,
-            //   (index) => RecentWorkCard(
-            //     index: index,
-            //     press: () async {
-            //       try {
-            //         await launch('${recentWorks[index].url}');
-            //       } catch (e) {
-            //         print('=----> $e');
-            //       }
-            //     },
-            //   ),
-            // ),
-            // ),
-            const SizedBox(height: kDefaultPadding * 5),
-          ],
-        ),
+          // List.generate(
+          //   recentWorks.length,
+          //   (index) => RecentWorkCard(
+          //     index: index,
+          //     press: () async {
+          //       try {
+          //         await launch('${recentWorks[index].url}');
+          //       } catch (e) {
+          //         print('=----> $e');
+          //       }
+          //     },
+          //   ),
+          // ),
+          // ),
+          const SizedBox(height: kDefaultPadding * 5),
+        ],
       ),
     );
   }
