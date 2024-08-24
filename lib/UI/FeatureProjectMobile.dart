@@ -46,14 +46,14 @@ class FeatureProjectMobile extends StatelessWidget {
             textColor: Colors.white,
           ),
           SizedBox(height: 20,),
-          Container(
-            width: size.width * 0.8,
-            //color: Colors.redAccent,
-            child: Image(
-              fit: BoxFit.contain,
-              image: AssetImage(imagePath ?? ''),
-            ),
-          ),
+          // Container(
+          //   width: size.width * 0.8,
+          //   //color: Colors.redAccent,
+          //   child: Image(
+          //     fit: BoxFit.contain,
+          //     image: AssetImage(imagePath ?? ''),
+          //   ),
+          // ),
           SizedBox(height: 20,),
 
           // Short Desc

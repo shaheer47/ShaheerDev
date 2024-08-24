@@ -213,15 +213,15 @@ class _CustomImageAnimationState extends State<CustomImageAnimation> {
       onExit: _incrementExit,
       child: Stack(
         children: [
-          Container(
-            height: size.height / 2,
-            width: size.width / 5,
-            color: Colors.black54,
-            child: Image(
-              fit: BoxFit.cover,
-              image: AssetImage("images/photo1.jpeg"),
-            ),
-          ),
+          // Container(
+          //   height: size.height / 2,
+          //   width: size.width / 5,
+          //   color: Colors.black54,
+          //   child: Image(
+          //     fit: BoxFit.cover,
+          //     image: AssetImage("images/photo1.jpeg"),
+          //   ),
+          // ),
           Container(
             height: size.height / 2,
             width: size.width / 5,
