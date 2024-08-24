@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
-import 'home_screen.dart';
-import 'package:flutter/foundation.dart';
+import 'package:potrtfolio/UI/Home.dart';
+
+import 'UI/splash_view.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
+      title: 'Shaheer Ahmad Ghori',
       debugShowCheckedModeBanner: false,
-      title: 'Shaheer\'s Portfolio',
-      theme: ThemeData(
-        inputDecorationTheme: kDefaultInputDecorationTheme,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: HomeScreen(),
+      home: SplashView(),
     );
   }
 }
