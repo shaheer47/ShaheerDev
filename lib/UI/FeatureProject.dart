@@ -58,38 +58,99 @@ class FeatureProject extends StatelessWidget {
                 Positioned(
                   top: size.height / 6,
                   right: 10.0,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: backgroundColor,
-                        boxShadow: [
-                      BoxShadow(
-                        color: secondaryColor,
-                        offset: Offset(-2, 0),
-                        blurRadius: 10,
-                      ),
-                      BoxShadow(
-                        color: secondaryColor,
-                        offset: Offset(2, 0),
-                        blurRadius: 10,
-                      )
-                    ]),
-                    alignment: Alignment.center,
-                    height: size.height * 0.18,
-                    width: size.width * 0.35,
-                    child: Wrap(
-                      alignment: WrapAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                          child: CustomText(
-                            text: projectDesc ?? '',
-                            textsize: 16.0,
-                            color: Colors.white.withOpacity(0.4),
-                            letterSpacing: 0.75,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                    
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                            color: backgroundColor,
+                            boxShadow: [
+                          BoxShadow(
+                            color: secondaryColor,
+                            offset: Offset(-2, 0),
+                            blurRadius: 10,
                           ),
+                          BoxShadow(
+                            color: secondaryColor,
+                            offset: Offset(2, 0),
+                            blurRadius: 10,
+                          )
+                        ]),
+                        alignment: Alignment.center,
+                        // height: size.height * 0.18,
+                        width: size.width * 0.35,
+                        child: Wrap(
+                          alignment: WrapAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: CustomText(
+                                text: projectDesc ?? '',
+                                textsize: 16.0,
+                                color: Colors.white.withOpacity(0.4),
+                                letterSpacing: 0.75,
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                      SizedBox(height: 20,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          NeonText(
+                            text: tech1 == null ? "" : tech1 ?? '',
+                            spreadColor: secondaryColor,
+                            blurRadius: 20,
+                            fontWeight: FontWeight.w700,
+                            textSize: 14.0,
+                            textColor: Colors.grey,
+                          ),
+                          SizedBox(
+                            width: 16.0,
+                          ),
+                          NeonText(
+                            text: tech2 == null ? "" : tech2 ?? '',
+                            spreadColor: secondaryColor,
+                            blurRadius: 20,
+                            fontWeight: FontWeight.w700,
+                            textSize: 14.0,
+                            textColor: Colors.grey,
+                          ),
+                          SizedBox(
+                            width: 16.0,
+                          ),
+                          NeonText(
+                            text: tech3 == null ? "" : tech3 ?? '',
+                            spreadColor: secondaryColor,
+                            blurRadius: 20,
+                            fontWeight: FontWeight.w700,
+                            textSize: 14.0,
+                            textColor: Colors.grey,
+                          ),
+                        ],
+                      ),
+      SizedBox(height: 10,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ontabApple!=null?IconButton(
+                            icon: FaIcon(FontAwesomeIcons.appStoreIos),
+                            color: Colors.white.withOpacity(0.3),
+                            onPressed: () => ontabApple == null ? () {} : ontabApple!(),
+                          ):SizedBox(),
+                          ontabAndroid==null?SizedBox():IconButton(
+                            icon: FaIcon(FontAwesomeIcons.android),
+                            color: Colors.white.withOpacity(0.3),
+                            onPressed: () => ontabAndroid == null ? () {} : ontabAndroid!(),
+                          ),
+                        ],
+                      ),
+
+                    ],
                   ),
                 ),
 
@@ -118,77 +179,78 @@ class FeatureProject extends StatelessWidget {
                   ),
                 ),
 
+
                 // Project Resources
-                Positioned(
-                  top: size.height * 0.36,
-                  right: 10.0,
-                  child: Container(
-                    height: size.height * 0.08,
-                    width: size.width * 0.25,
-                    // color: Colors.indigo,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        NeonText(
-                          text: tech1 == null ? "" : tech1 ?? '',
-                          spreadColor: secondaryColor,
-                          blurRadius: 20,
-                          fontWeight: FontWeight.w700,
-                          textSize: 14.0,
-                          textColor: Colors.grey,
-                        ),
-                        SizedBox(
-                          width: 16.0,
-                        ),
-                        NeonText(
-                          text: tech2 == null ? "" : tech2 ?? '',
-                          spreadColor: secondaryColor,
-                          blurRadius: 20,
-                          fontWeight: FontWeight.w700,
-                          textSize: 14.0,
-                          textColor: Colors.grey,
-                        ),
-                        SizedBox(
-                          width: 16.0,
-                        ),
-                        NeonText(
-                          text: tech3 == null ? "" : tech3 ?? '',
-                          spreadColor: secondaryColor,
-                          blurRadius: 20,
-                          fontWeight: FontWeight.w700,
-                          textSize: 14.0,
-                          textColor: Colors.grey,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                // Positioned(
+                //   top: size.height * 0.36,
+                //   right: 10.0,
+                //   child: Container(
+                //     height: size.height * 0.08,
+                //     width: size.width * 0.25,
+                //     // color: Colors.indigo,
+                //     child: Row(
+                //       mainAxisAlignment: MainAxisAlignment.end,
+                //       children: [
+                //         NeonText(
+                //           text: tech1 == null ? "" : tech1 ?? '',
+                //           spreadColor: secondaryColor,
+                //           blurRadius: 20,
+                //           fontWeight: FontWeight.w700,
+                //           textSize: 14.0,
+                //           textColor: Colors.grey,
+                //         ),
+                //         SizedBox(
+                //           width: 16.0,
+                //         ),
+                //         NeonText(
+                //           text: tech2 == null ? "" : tech2 ?? '',
+                //           spreadColor: secondaryColor,
+                //           blurRadius: 20,
+                //           fontWeight: FontWeight.w700,
+                //           textSize: 14.0,
+                //           textColor: Colors.grey,
+                //         ),
+                //         SizedBox(
+                //           width: 16.0,
+                //         ),
+                //         NeonText(
+                //           text: tech3 == null ? "" : tech3 ?? '',
+                //           spreadColor: secondaryColor,
+                //           blurRadius: 20,
+                //           fontWeight: FontWeight.w700,
+                //           textSize: 14.0,
+                //           textColor: Colors.grey,
+                //         ),
+                //       ],
+                //     ),
+                //   ),
+                // ),
 
                 // Gitub Link
-                Positioned(
-                  top: size.height * 0.42,
-                  right: 10.0,
-                  child: Container(
-                    height: size.height * 0.08,
-                    width: size.width * 0.25,
-                    // color: Colors.indigo,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        ontabApple!=null?IconButton(
-                          icon: FaIcon(FontAwesomeIcons.appStoreIos),
-                          color: Colors.white.withOpacity(0.3),
-                          onPressed: () => ontabApple == null ? () {} : ontabApple!(),
-                        ):SizedBox(),
-                        ontabAndroid==null?SizedBox():IconButton(
-                          icon: FaIcon(FontAwesomeIcons.android),
-                          color: Colors.white.withOpacity(0.3),
-                          onPressed: () => ontabAndroid == null ? () {} : ontabAndroid!(),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                // Positioned(
+                //   top: size.height * 0.42,
+                //   right: 10.0,
+                //   child: Container(
+                //     height: size.height * 0.08,
+                //     width: size.width * 0.25,
+                //     // color: Colors.indigo,
+                //     child: Row(
+                //       mainAxisAlignment: MainAxisAlignment.end,
+                //       children: [
+                //         ontabApple!=null?IconButton(
+                //           icon: FaIcon(FontAwesomeIcons.appStoreIos),
+                //           color: Colors.white.withOpacity(0.3),
+                //           onPressed: () => ontabApple == null ? () {} : ontabApple!(),
+                //         ):SizedBox(),
+                //         ontabAndroid==null?SizedBox():IconButton(
+                //           icon: FaIcon(FontAwesomeIcons.android),
+                //           color: Colors.white.withOpacity(0.3),
+                //           onPressed: () => ontabAndroid == null ? () {} : ontabAndroid!(),
+                //         ),
+                //       ],
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
