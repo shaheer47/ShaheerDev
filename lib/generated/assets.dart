@@ -2,52 +2,22 @@
 class Assets {
   Assets._();
 
-  static const String imagesBIODATA = 'images/BIODATA.pdf';
   static const String imagesCrewlogixLogo = 'images/crewlogix_logo.png';
-  static const String imagesDeedyResume = 'images/deedy_resume.pdf';
   static const String imagesFavicon = 'images/favicon.png';
   static const String imagesHorizam = 'images/horizam.png';
   static const String imagesLogo = 'images/logo.svg';
   static const String imagesPhoto1 = 'images/photo1.jpeg';
   static const String imagesPic10 = 'images/pic10.png';
-  static const String imagesPic101 = 'images/pic101.png';
-  static const String imagesPic102 = 'images/pic102.gif';
-  static const String imagesPic103 = 'images/pic103.png';
-  static const String imagesPic104 = 'images/pic104.png';
-  static const String imagesPic105 = 'images/pic105.png';
-  static const String imagesPic106 = 'images/pic106.png';
-  static const String imagesPic107 = 'images/pic107.jfif';
-  static const String imagesPic108 = 'images/pic108.jfif';
-  static const String imagesPic109 = 'images/pic109.jfif';
   static const String imagesPic11 = 'images/pic11.png';
-  static const String imagesPic110 = 'images/pic110.jfif';
-  static const String imagesPic111 = 'images/pic111.gif';
-  static const String imagesPic112 = 'images/pic112.jfif';
-  static const String imagesPic113 = 'images/pic113.jfif';
-  static const String imagesPic114 = 'images/pic114.png';
-  static const String imagesPic115 = 'images/pic115.png';
-  static const String imagesPic116 = 'images/pic116.jfif';
-  static const String imagesPic117 = 'images/pic117.png';
-  static const String imagesPic118 = 'images/pic118.jpeg';
-  static const String imagesPic119 = 'images/pic119.jpeg';
   static const String imagesPic12 = 'images/pic12.png';
-  static const String imagesPic120 = 'images/pic120.png';
-  static const String imagesPic121 = 'images/pic121.png';
   static const String imagesPic2 = 'images/pic2.png';
   static const String imagesPic3 = 'images/pic3.png';
   static const String imagesPic4 = 'images/pic4.png';
-  static const String imagesPic5 = 'images/pic5.jpg';
-  static const String imagesPic501 = 'images/pic501.png';
-  static const String imagesPic506 = 'images/pic506.png';
-  static const String imagesPic6 = 'images/pic6.jpg';
-  static const String imagesPic7 = 'images/pic7.jpg';
-  static const String imagesPic8 = 'images/pic8.jpg';
-  static const String imagesPic9 = 'images/pic9.jpg';
+  static const String imagesPic5 = 'images/pic5.png';
+  static const String imagesPic6 = 'images/pic6.png';
+  static const String imagesPic7 = 'images/pic7.png';
+  static const String imagesPic8 = 'images/pic8.png';
+  static const String imagesPic9 = 'images/pic9.png';
   static const String imagesSystemsLogo = 'images/systems_logo.png';
-  static const String copyImagesPic5 = 'images/pic5.png';
-  static const String copyImagesPic6 = 'images/pic6.png';
-  static const String copyImagesPic7 = 'images/pic7.png';
-  static const String copyImagesPic8 = 'images/pic8.png';
-  static const String copyImagesPic9 = 'images/pic9.png';
 
 }
