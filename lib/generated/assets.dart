@@ -42,7 +42,12 @@ class Assets {
   static const String imagesPic6 = 'images/pic6.jpg';
   static const String imagesPic7 = 'images/pic7.jpg';
   static const String imagesPic8 = 'images/pic8.jpg';
-  static const String imagesPic9 = 'images/pic9.png';
+  static const String imagesPic9 = 'images/pic9.jpg';
   static const String imagesSystemsLogo = 'images/systems_logo.png';
+  static const String shaheerDevBackup copyImagesPic5 = 'images/pic5.png';
+  static const String shaheerDevBackup copyImagesPic6 = 'images/pic6.png';
+  static const String shaheerDevBackup copyImagesPic7 = 'images/pic7.png';
+  static const String shaheerDevBackup copyImagesPic8 = 'images/pic8.png';
+  static const String shaheerDevBackup copyImagesPic9 = 'images/pic9.png';
 
 }
