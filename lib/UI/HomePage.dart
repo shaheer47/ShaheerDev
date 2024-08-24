@@ -96,6 +96,7 @@ class _HomePageState extends State<HomePage> {
                 width: size.width,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
+
                   child: Row(
                     children: [
                       Image(
