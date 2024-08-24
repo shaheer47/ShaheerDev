@@ -7,7 +7,7 @@ Software Developer Portfolio Template that helps you showcase your work and skil
 
 
 
-## To view a live demo,[Click Here](https://shaheer47.github.io/ShaheerDev).
+## To view a live demo,[Click Here](https://champ96k.github.io).
 
 
 
@@ -16,6 +16,7 @@ Software Developer Portfolio Template that helps you showcase your work and skil
 -  [X] Andoid
 -  [X] Windows
 -  [X] linux
+-  [ ] MacOS (probably)
 -  [X] IOs
    
    
@@ -77,7 +78,7 @@ Run the following command to generate a release build:
 
 
 
-##### Design credit : (https://champ96k.github.io/).
+##### Design credit : [Brittany Chiang](https://www.linkedin.com/in/bchiang7/).
 
 
 For help getting started with Flutter, view our
