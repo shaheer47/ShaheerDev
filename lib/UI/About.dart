@@ -38,14 +38,14 @@ class About extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height,
+      // height: size.height,
       width:size.width - 100,
       child: Row(
         children: [
           //About me
           Flexible(
             child: Container(
-              height: size.height * 0.9,
+              // height: size.height * 0.9,
               width: size.width,
               child: Column(
                 children: [
