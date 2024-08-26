@@ -48,16 +48,16 @@ class FeatureProjectMobile extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Container(
+          SizedBox(
             width: size.width * 0.8,
             //color: Colors.redAccent,
-            child: CachedNetworkImage(
-                fit: BoxFit.contain, imageUrl: (imagePath ?? '')),
+            // child: CachedNetworkImage(
+            //     fit: BoxFit.contain, imageUrl: (imagePath ?? '')),
 
-            // child: Image(
-            //   fit: BoxFit.contain,
-            //   image: AssetImage(imagePath ?? ''),
-            // ),
+            child: Image(
+              fit: BoxFit.contain,
+              image: AssetImage(imagePath ?? ''),
+            ),
           ),
           const SizedBox(
             height: 20,

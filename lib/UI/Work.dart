@@ -23,7 +23,7 @@ class _WorkState extends State<Work> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
 
-            NeonText(
+            const NeonText(
               text: "02.",
               spreadColor: secondaryColor,
               blurRadius: 20,
@@ -31,10 +31,10 @@ class _WorkState extends State<Work> {
               textSize: 20.0,
               textColor: primaryColor,
             ),
-            SizedBox(
+            const SizedBox(
               width: 12.0,
             ),
-            NeonText(
+            const NeonText(
               text: "Where I've Worked",
               spreadColor: secondaryColor,
               blurRadius: 20,
@@ -49,9 +49,9 @@ class _WorkState extends State<Work> {
             Container(
               width: size.width / 4,
               height: 1.10,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color:secondaryColor,
-                  boxShadow: const [
+                  boxShadow: [
                 BoxShadow(
                   color: secondaryColor,
                   offset: Offset(-10, 0),
@@ -78,7 +78,7 @@ class _WorkState extends State<Work> {
                   //color: Colors.indigo,
                   child: Stack(
                     children: [
-                      Center(
+                      const Center(
                         child: VerticalDivider(
                           color: secondaryColor,
                           thickness: 1.75,
@@ -88,7 +88,7 @@ class _WorkState extends State<Work> {
                         ),
                       ),
                       Container(
-                        child: Center(
+                        child: const Center(
                             child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [

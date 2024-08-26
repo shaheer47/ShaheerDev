@@ -18,6 +18,6 @@ const List<String> TAG_LINES_LISTS = [
 const String SHORT_DESCRIPTION='I\'m a Software Engineer specializing in mobile development,\nparticularly with Flutter and Android Native. \nI turn challenges into seamless mobile experiences.';
 
 // const String My_Photo_PICTURE = 'https:/https/drive.usercontent.google.com/download?id=12jOgPog_3qLmj3tSLak-qWG2NTW3M_YY&export=view&authuser=0.png';
-const String My_Photo_PICTURE = 'https://i.postimg.cc/T3dvTHqp/image.png';
+const String My_Photo_PICTURE = 'https://i.postimg.cc/T3dvTHqp/photo1.jpeg';
 
 

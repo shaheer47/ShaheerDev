@@ -177,62 +177,32 @@ class CustomImageAnimation extends StatefulWidget {
 }
 
 class _CustomImageAnimationState extends State<CustomImageAnimation> {
-  Color customImageColor = primaryColor.withOpacity(0.5);
-  // ignore: unused_field
-  int _enterCounter = 0;
-  // ignore: unused_field
-  int _exitCounter = 0;
-  double x = 0.0;
-  double y = 0.0;
 
-  void _incrementEnter(PointerEvent details) {
-    setState(() {
-      _enterCounter++;
-    });
-  }
-
-  void _incrementExit(PointerEvent details) {
-    setState(() {
-      customImageColor =      primaryColor.withOpacity(0.5);
-      _exitCounter++;
-    });
-  }
-
-  void _updateLocation(PointerEvent details) {
-    setState(() {
-      customImageColor = Colors.transparent;
-      x = details.position.dx;
-      y = details.position.dy;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return MouseRegion(
-      onEnter: _incrementEnter,
-      onHover: _updateLocation,
-      onExit: _incrementExit,
-      child: Stack(
-        children: [
-          Container(
-            height: size.height / 2,
-            width: size.width / 5,
-            color: Colors.black54,
-            child:
-            Column(
-              children: [
-                CachedNetworkImage(imageUrl: My_Photo_PICTURE,),
-              ],
-            )
-          ),
-          Container(
-            height: size.height / 2,
-            width: size.width / 5,
-            color: customImageColor,
-          ),
-        ],
-      ),
+    return Stack(
+      children: [
+        Container(
+          height: size.height / 2,
+          width: size.width / 5,
+          color: Colors.black54,
+          child:
+          const Column(
+            children: [
+              Image(
+                  fit: BoxFit.cover,
+                  image: AssetImage("images/photo1.jpeg"),
+                ),
+             ],
+          )
+        ),
+        SizedBox(
+          height: size.height / 2,
+          width: size.width / 5,
+        ),
+      ],
     );
   }
 }

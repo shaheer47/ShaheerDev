@@ -84,7 +84,7 @@ class _MobileHomeState extends State<MobileHome> {
     return Scaffold(
         backgroundColor: backgroundColor,
         body: SingleChildScrollView(
-          physics: ScrollPhysics(),
+          physics: const ScrollPhysics(),
           primary: true,
           scrollDirection: Axis.vertical,
           child: Column(
@@ -93,8 +93,8 @@ class _MobileHomeState extends State<MobileHome> {
               Container(
                 height: size.height * 0.14,
                 width: size.width,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -117,14 +117,14 @@ class _MobileHomeState extends State<MobileHome> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(
-                            icon: FaIcon(FontAwesomeIcons.github),
-                            color: Color(0xffffA8B2D1),
+                            icon: const FaIcon(FontAwesomeIcons.github),
+                            color: const Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () => method
                                 .launchURL("https://github.com/shaheer47")),
                         IconButton(
-                          icon: FaIcon(FontAwesomeIcons.linkedin),
-                          color: Color(0xffffA8B2D1),
+                          icon: const FaIcon(FontAwesomeIcons.linkedin),
+                          color: const Color(0xffffA8B2D1),
                           onPressed: () {
                             method.launchURL(
                                 "https://www.linkedin.com/in/shaheerghouri");
@@ -132,8 +132,8 @@ class _MobileHomeState extends State<MobileHome> {
                           iconSize: 16.0,
                         ),
                         IconButton(
-                            icon: Icon(Icons.mark_email_read),
-                            color: Color(0xffffA8B2D1),
+                            icon: const Icon(Icons.mark_email_read),
+                            color: const Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
                               method.launchEmail();
@@ -141,9 +141,9 @@ class _MobileHomeState extends State<MobileHome> {
                         Padding(
                           padding: const EdgeInsets.only(top: 16.0),
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 color: primaryColor,
-                                boxShadow: const [
+                                boxShadow: [
                                   BoxShadow(
                                     color: primaryColor,
                                     offset: Offset(-2, 0),
@@ -188,7 +188,7 @@ class _MobileHomeState extends State<MobileHome> {
                                             color: whiteColor,
                                             letterSpacing: 3.0,
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 6.0,
                                           ),
 
@@ -212,7 +212,7 @@ class _MobileHomeState extends State<MobileHome> {
                                               ),
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 4.0,
                                           ),
                                           Container(
@@ -235,7 +235,7 @@ class _MobileHomeState extends State<MobileHome> {
                                               isRepeatingAnimation: true,
                                             ),
                                           ),
-                                          Wrap(
+                                          const Wrap(
                                             children: [
                                               Text(
                                                 SHORT_DESCRIPTION,
@@ -254,7 +254,7 @@ class _MobileHomeState extends State<MobileHome> {
 
                                           //get in tuch text
                                           Container(
-                                            margin: EdgeInsets.only(left: 25),
+                                            margin: const EdgeInsets.only(left: 25),
                                             child: InkWell(
                                               onTap: () {
                                                 method.launchEmail();
@@ -297,7 +297,7 @@ class _MobileHomeState extends State<MobileHome> {
                                                   borderRadius:
                                                   BorderRadius.circular(4.0),
                                                 ),
-                                                child: Text(
+                                                child: const Text(
                                                   "Get In Touch",
                                                   style: TextStyle(
                                                     color: primaryColor,
@@ -349,7 +349,7 @@ class _MobileHomeState extends State<MobileHome> {
                                             height: size.height * 0.04,
                                           ),
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/90dshGDd/pic9.png",
+                                            imagePath: "images/pic9.png",
                                             ontabAndroid: () {
                                               method.launchURL(
                                                   "https://play.google.com/store/apps/details?id=com.origami.nebulum&hl=en_US");
@@ -366,7 +366,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           ),
 
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/zvTYGscR/pic2.png",
+                                            imagePath: "images/pic2.png",
                                             ontabApple: () {
                                               method.launchURL(
                                                   "https://apps.apple.com/vn/app/fanbladz/id6443621706");
@@ -383,7 +383,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           ),
 
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/fR8nyjB5/pic3.png",
+                                            imagePath: "images/pic3.png",
                                             ontabApple: () {
                                               method.launchURL(
                                                   "https://apps.apple.com/us/app/bumpdate/id1592506191");
@@ -400,7 +400,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           ),
 
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/y6RHjR8Y/pic4.png",
+                                            imagePath: "images/pic4.png",
                                             ontabApple: () {
                                               method.launchURL(
                                                   "https://apps.apple.com/bg/app/anxietyease/id1609414463");
@@ -417,7 +417,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           ),
                                           //ff
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/d0DMykfF/pic5.png",
+                                            imagePath: "images/pic5.png",
                                             ontabAndroid: () {
                                               method.launchURL(
                                                   "https://play.google.com/store/apps/details?id=com.master.pos");
@@ -430,7 +430,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           ),
 
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/5trhq9cC/pic6.png",
+                                            imagePath: "images/pic6.png",
                                             ontabApple: () {
                                               method.launchURL(
                                                   "https://play.google.com/store/apps/details?id=com.textilechat.ingenious.textilechat&hl=en_US");
@@ -444,7 +444,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           ),
 
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/VvQ2p7ks/pic7.png",
+                                            imagePath: "images/pic7.png",
                                             projectDesc:
                                             "Application for Restaurant with multiple roles like Cashier, Counter, Mobile, Kitchen and multiple scales of business. Application include offline functionality with Sunmi and thermal printer integration.",
                                             projectTitle: "Real Spice",
@@ -453,7 +453,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           ),
 
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/G2sZM0rS/pic8.png",
+                                            imagePath: "images/pic8.png",
                                             ontabApple: () {
                                               method.launchURL(
                                                   "https://apps.apple.com/in/app/master-affiliate/id1594362538");
@@ -471,7 +471,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           ),
 
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/tCbLzmc2/pic10.png",
+                                            imagePath: "images/pic10.png",
                                             ontabAndroid: () {
                                               method.launchURL(
                                                   "https://play.google.com/store/apps/details?id=com.app.livewave&hl=en_US");
@@ -485,7 +485,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           ),
 
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/9XZ6ZjLD/pic11.png",
+                                            imagePath: "images/pic11.png",
                                             ontabAndroid: () {
                                               method.launchURL(
                                                   "https://play.google.com/store/apps/details?id=com.horizam.tikl&hl=en_US");
@@ -498,7 +498,7 @@ class _MobileHomeState extends State<MobileHome> {
                                             tech3: "Kotlin",
                                           ),
                                           FeatureProjectMobile(
-                                            imagePath: "https://i.postimg.cc/L6VGQ3KR/pic12.png",
+                                            imagePath: "images/pic12.png",
                                             ontabAndroid: () {
                                               method.launchURL(
                                                   "https://play.google.com/store/apps/details?id=com.devprotocols.blacklink&hl=en_US");
@@ -516,7 +516,7 @@ class _MobileHomeState extends State<MobileHome> {
                                         ],
                                       )),
 
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 6.0,
                                   ),
 
@@ -534,7 +534,7 @@ class _MobileHomeState extends State<MobileHome> {
                                             mainAxisAlignment:
                                             MainAxisAlignment.center,
                                             children: [
-                                              NeonText(
+                                              const NeonText(
                                                 text: "What's Next?",
                                                 spreadColor: secondaryColor,
                                                 blurRadius: 20,
@@ -542,10 +542,10 @@ class _MobileHomeState extends State<MobileHome> {
                                                 textSize: 16.0,
                                                 textColor: Colors.white,
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 16.0,
                                               ),
-                                              NeonText(
+                                              const NeonText(
                                                 textAlign: TextAlign.center,
                                                 text: 'Get In Touch',
                                                 spreadColor: secondaryColor,
@@ -554,7 +554,7 @@ class _MobileHomeState extends State<MobileHome> {
                                                 textColor: Colors.white,
                                                 textSize: 42,
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 16.0,
                                               ),
                                               Wrap(
@@ -571,7 +571,7 @@ class _MobileHomeState extends State<MobileHome> {
                                                   ),
                                                 ],
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 32.0,
                                               ),
                                               InkWell(
@@ -590,7 +590,7 @@ class _MobileHomeState extends State<MobileHome> {
                                                 BorderRadius.circular(4.0),
                                                 child: Container(
                                                   alignment: Alignment.center,
-                                                  margin: EdgeInsets.all(0.85),
+                                                  margin: const EdgeInsets.all(0.85),
                                                   height: size.height * 0.07,
                                                   width: size.height * 0.20,
                                                   decoration: BoxDecoration(
@@ -617,7 +617,7 @@ class _MobileHomeState extends State<MobileHome> {
                                                     borderRadius:
                                                     BorderRadius.circular(4.0),
                                                   ),
-                                                  child: Text(
+                                                  child: const Text(
                                                     'Say Hello',
                                                     style: TextStyle(
                                                       color: primaryColor,
@@ -678,7 +678,7 @@ class _MobileHomeState extends State<MobileHome> {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    NeonText(
+                                    const NeonText(
                                       text: 'shaheerahmedghori@gmail.com',
                                       spreadColor: secondaryColor,
                                       blurRadius: 20,
@@ -687,15 +687,15 @@ class _MobileHomeState extends State<MobileHome> {
                                       textSize: 14,
                                     ),
 
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 26.0,
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(top: 16.0),
                                       child: Container(
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                             color: primaryColor,
-                                            boxShadow: const [
+                                            boxShadow: [
                                               BoxShadow(
                                                 color: primaryColor,
                                                 offset: Offset(0, 2),
