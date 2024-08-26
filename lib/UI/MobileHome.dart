@@ -46,7 +46,7 @@ class _MobileHomeState extends State<MobileHome> {
             children: [
               //Mavigation Bar
               SizedBox(
-                height: size.height * 0.14,
+                height: size.height * 0.15,
                 width: size.width,
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -54,6 +54,7 @@ class _MobileHomeState extends State<MobileHome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image(
+
                         fit: BoxFit.fill,
                         image: AssetImage('images/favicon.png'),
                       ),
