@@ -22,56 +22,14 @@ class MobileHome extends StatefulWidget {
 }
 
 class _MobileHomeState extends State<MobileHome> {
+
   Method method = Method();
-  AutoScrollController _autoScrollController = AutoScrollController();
-  final scrollDirection = Axis.vertical;
 
-  bool isExpaned = true;
 
-  bool get _isAppBarExpanded {
-    return _autoScrollController.hasClients &&
-        _autoScrollController.offset > (160 - kToolbarHeight);
-  }
 
-  @override
-  void initState() {
-    _autoScrollController = AutoScrollController(
-      viewportBoundaryGetter: () =>
-          Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom),
-      axis: scrollDirection,
-    )..addListener(
-          () => _isAppBarExpanded
-          ? isExpaned != false
-          ? setState(
-            () {
-          isExpaned = false;
-          print('setState is called');
-        },
-      )
-          : {}
-          : isExpaned != true
-          ? setState(() {
-        print('setState is called');
-        isExpaned = true;
-      })
-          : {},
-    );
-    super.initState();
-  }
-
-  Future _scrollToIndex(int index) async {
-    await _autoScrollController.scrollToIndex(index,
-        preferPosition: AutoScrollPosition.begin);
-    _autoScrollController.highlight(index);
-  }
 
   Widget _wrapScrollTag({required int index, required Widget child}) {
-    return AutoScrollTag(
-      key: ValueKey(index),
-      controller: _autoScrollController,
-      index: index,
-      child: child,
-    );
+    return child;
   }
 
   bool onHoverResume = false;
@@ -169,7 +127,6 @@ class _MobileHomeState extends State<MobileHome> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
                         child: CustomScrollView(
-                          controller: _autoScrollController,
                           slivers: <Widget>[
                             SliverList(
                                 delegate: SliverChildListDelegate([
