@@ -32,9 +32,6 @@ class _MobileHomeState extends State<MobileHome> {
     return child;
   }
 
-  bool onHoverResume = false;
-  bool onHoverGetInTouch = false;
-  bool onHoverSayHello = false;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +45,7 @@ class _MobileHomeState extends State<MobileHome> {
           child: Column(
             children: [
               //Mavigation Bar
-              Container(
+              SizedBox(
                 height: size.height * 0.14,
                 width: size.width,
                 child: const Padding(
@@ -68,7 +65,7 @@ class _MobileHomeState extends State<MobileHome> {
               Row(
                 children: [
                   //Social Icon
-                  Container(
+                  SizedBox(
                     width: size.width * 0.09,
                     height: size.height - 82,
                     child: Column(
@@ -122,7 +119,7 @@ class _MobileHomeState extends State<MobileHome> {
                     ),
                   ),
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                       height: size.height - 82,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -172,7 +169,7 @@ class _MobileHomeState extends State<MobileHome> {
                                           const SizedBox(
                                             height: 4.0,
                                           ),
-                                          Container(
+                                          SizedBox(
                                             height: 500,
                                             child: AnimatedTextKit(
                                               animatedTexts: List.generate(
@@ -216,14 +213,7 @@ class _MobileHomeState extends State<MobileHome> {
                                               onTap: () {
                                                 method.launchEmail();
                                               },
-                                              onHover: (value) {
-                                                setState(() {
-                                                  onHoverGetInTouch = value;
-                                                });
-                                              },
-                                              hoverColor:
-                                              // primaryColor.withOpacity(0.2),
-                                              secondaryColor,
+
                                               borderRadius:
                                               BorderRadius.circular(4.0),
                                               child: Container(
@@ -231,23 +221,7 @@ class _MobileHomeState extends State<MobileHome> {
                                                 height: size.height * 0.09,
                                                 // width: size.width * 0.14,
                                                 decoration: BoxDecoration(
-                                                  color: onHoverGetInTouch
-                                                      ? secondaryColor
-                                                      : backgroundColor,
-                                                  boxShadow: onHoverGetInTouch
-                                                      ? const [
-                                                    BoxShadow(
-                                                      color: primaryColor,
-                                                      offset: Offset(-2, 0),
-                                                      blurRadius: 20,
-                                                    ),
-                                                    BoxShadow(
-                                                      color: primaryColor,
-                                                      offset: Offset(2, 0),
-                                                      blurRadius: 20,
-                                                    )
-                                                  ]
-                                                      : null,
+                                                  color:backgroundColor,
                                                   border: Border.all(
                                                     color: (primaryColor),
                                                   ),
@@ -482,7 +456,7 @@ class _MobileHomeState extends State<MobileHome> {
                                     index: 3,
                                     child: Column(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           height: size.height * 0.68,
                                           width: MediaQuery.of(context).size.width -
                                               100,
@@ -535,14 +509,6 @@ class _MobileHomeState extends State<MobileHome> {
                                                 onTap: () {
                                                   method.launchEmail();
                                                 },
-                                                onHover: (value) {
-                                                  setState(() {
-                                                    onHoverSayHello = value;
-                                                  });
-                                                },
-                                                hoverColor:
-                                                // primaryColor.withOpacity(0.2),
-                                                secondaryColor,
                                                 borderRadius:
                                                 BorderRadius.circular(4.0),
                                                 child: Container(
@@ -551,23 +517,7 @@ class _MobileHomeState extends State<MobileHome> {
                                                   height: size.height * 0.07,
                                                   width: size.height * 0.20,
                                                   decoration: BoxDecoration(
-                                                    color: onHoverSayHello
-                                                        ? secondaryColor
-                                                        : backgroundColor,
-                                                    boxShadow: onHoverSayHello
-                                                        ? const [
-                                                      BoxShadow(
-                                                        color: primaryColor,
-                                                        offset: Offset(-2, 0),
-                                                        blurRadius: 20,
-                                                      ),
-                                                      BoxShadow(
-                                                        color: primaryColor,
-                                                        offset: Offset(2, 0),
-                                                        blurRadius: 20,
-                                                      )
-                                                    ]
-                                                        : null,
+                                                    color:  backgroundColor,
                                                     border: Border.all(
                                                       color: (primaryColor),
                                                     ),
@@ -617,7 +567,7 @@ class _MobileHomeState extends State<MobileHome> {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width * 0.07,
                     height: MediaQuery.of(context).size.height - 82,
                     //color: Colors.orange,
