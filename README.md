@@ -7,6 +7,8 @@ A new Flutter project.
 This project is a starting point for a Flutter application.
 
 # IMPORTANT NOTE:::::::::::::::::::::::::::::::::::
+flutter build web --web-renderer canvaskit//Use this for release renderer html is better but performance is poor on mobile
+
 flutter run -d chrome --web-renderer html // to run the app
 
 flutter build web --web-renderer html --release // to generate a production build
